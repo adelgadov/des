@@ -77,9 +77,20 @@ for ($i = 0;$i <= 16;$i++) {
 $xor = $mensaje -> xorf($clave -> getKiArray());
 echo "<br>";
 echo "<br>";
-for ($i = 0;$i <= 16;$i++) {
-    echo "KiR<sub>".$i."</sub> = ".$mensaje -> getRArray()[$i]."<br>";
+for ($i = 0;$i < 16;$i++) {
+    echo "KiR<sub>".$i."</sub> = ".$mensaje -> getKir()[$i]."<br>";
+}
+
+echo "<br>";
+
+$eses = $mensaje -> scajas();
+
+//var_dump($mensaje -> getEses());
+
+for ($i=0;$i<count($mensaje -> getEses());$i++) {
+    echo 'S<sub>'.$i.'</sub>='.$mensaje -> getEses()[$i].'<br>';
 }
 ?>
+
 </body>
 </html>
